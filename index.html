@@ -24,16 +24,15 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
     transition: background 0.3s, backdrop-filter 0.3s;
     animation:zoom 8s infinite ease-in-out;
 }
 
-/* @keyframes zoom {
+@keyframes zoom {
     0% { transform: scale(1);}
     50% { transform: scale(1.04);}
     100% { transform: scale(1);}
-} */
+}
     nav a{
         text-decoration: none;
     }
@@ -84,8 +83,6 @@
         padding-left: 180px;
         border-radius: 20px;
         outline: none;
-        /* backdrop-filter: blur(20px); */
-        /* border-radius: 6px; */
     }
     input::placeholder{
         color: white;
@@ -127,7 +124,6 @@
     }
     .card:hover{
         transform: scale(1.1);
-        /* width: 310px; */
     }
     .cont{
        width: 97%;
@@ -282,26 +278,26 @@
     <div class="collapse navbar-collapse ogo" id="mynavbar">
       <a href="#trending" class="d-block">Treanding Today</a>
       <a href="#playlist" class="d-block">Popular Playlist</a>
-      <div class="dropdown d-inline-block">
-        <a class="dropdown-toggle d-block" href="#" id="genreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Genre
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="genreDropdown">
-          <li><a class="dropdown-item" href="#kdrama">Action Movie</a></li>
-          <li><a class="dropdown-item" href="#african">African Made</a></li>
-          <li><a class="dropdown-item" href="#action">K-DRAMA</a></li>
-          <li><a class="dropdown-item" href="#romance">Romance</a></li>
-        </ul>
-      </div>
+    <div class="dropdown d-inline-block m-3">
+    <button class="btn btn-danger dropdown-toggle" id="genreDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+      Genre
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="genreDropdown">
+      <li><a class="dropdown-item" href="#kdrama">Action Movie</a></li>
+      <li><a class="dropdown-item" href="#african">African Made</a></li>
+      <li><a class="dropdown-item" href="#action">K-DRAMA</a></li>
+      <li><a class="dropdown-item" href="#romance">Romance</a></li>
+    </ul>
+  </div>
     </div>
   </div>
 </nav>
     <div class="contain">
      <div>
       <div id="demo" class="carousel slide" data-bs-ride="carousel">
-       <div class="carousel-inner " style="height: 500px;overflow: hidden;display: flex;">
+       <div class="carousel-inner " style="height: 600px;overflow: hidden;display: flex;">
         <div class="carousel-item active">
-         <img src="image/diablo.jpg" alt="Los Angeles" class="d-block w-100 object-fit-cover h-100">
+         <img src="image/diablo.jpg" alt="Los Angeles" class="d-block w-100" style="height: 100vh; object-fit: cover;" >
          <div class="carousel-caption" style="text-align: start;float:right;">
          <h2 style="color: white;">[VF] Diablo</h2>
          <p class="text-white-50">|2025| Action, Adventure, Crime</p>
@@ -309,29 +305,32 @@
         </div>
     </div>
     <div class="carousel-item">
-      <img src="image/swat.jpg" alt="Chicago" class="d-block w-100 object-fit-cover h-100">
-      <div class="carousel-caption" style="text-align: start;float:right;">
-         <h2 style="color: white;">[VF] S.W.A.T</h2>
-         <p class="text-white-50">|2025| Action, Adventure, Crime</p>
-         <button style="padding: 10px 30px;border: none;border-radius: 20px;background-color: green;">play</button>
-     </div> 
-    </div>
-    <div class="carousel-item">
-      <img src="image/squid game.jpg" alt="New York" class="d-block w-100 object-fit-cover h-100">
-      <div class="carousel-caption" style="text-align: start;float:right;">
-         <h2 style="color: white;">[VF] SQUID GAME</h2>
-         <p class="text-white-50">|2025| Action, Adventure, Crime</p>
-         <button style="padding: 10px 30px;border: none;border-radius: 20px;background-color: green;">play</button>
-     </div>
-    </div>
-    <div class="carousel-item">
-      <img src="image/olypmo.jpg" alt="New York" class="d-block w-100 h-100" style="object-fit: cover;">
-      <div class="carousel-caption" style="text-align: start;float:right;">
-         <h2 style="color: white;">[VF] OLYPMO</h2>
-         <p class="text-white-50">|2025| Action, Adventure, Crime</p>
-         <button style="padding: 10px 30px;border: none;border-radius: 20px;background-color: green;">play</button>
-     </div>
-    </div>
+  <img src="image/swat.jpg" alt="S.W.A.T" class="d-block w-100" style="height: 100vh; object-fit: cover;">
+  <div class="carousel-caption text-start">
+    <h2 class="text-white">[VF] S.W.A.T</h2>
+    <p class="text-white-50">|2025| Action, Adventure, Crime</p>
+    <button style="padding: 10px 30px; border: none; border-radius: 20px; background-color: green;">Play</button>
+  </div>
+</div>
+
+<div class="carousel-item">
+  <img src="image/squid-game.jpg" alt="Squid Game" class="d-block w-100" style="height: 100vh; object-fit: cover;">
+  <div class="carousel-caption text-start">
+    <h2 class="text-white">[VF] SQUID GAME</h2>
+    <p class="text-white-50">|2025| Action, Adventure, Crime</p>
+    <button style="padding: 10px 30px; border: none; border-radius: 20px; background-color: green;">Play</button>
+  </div>
+</div>
+
+<div class="carousel-item">
+  <img src="image/olypmo.jpg" alt="Olypmo" class="d-block w-100" style="height: 100vh; object-fit: cover;">
+  <div class="carousel-caption text-start">
+    <h2 class="text-white">[VF] OLYPMO</h2>
+    <p class="text-white-50">|2025| Action, Adventure, Crime</p>
+    <button style="padding: 10px 30px; border: none; border-radius: 20px; background-color: green;">Play</button>
+  </div>
+</div>
+
   </div>
 
   <!-- Left and right controls/icons -->
@@ -589,7 +588,6 @@
     </div>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
 document.querySelector('input[type="text"]').addEventListener('input', function(e) {
     const search = e.target.value.toLowerCase();
